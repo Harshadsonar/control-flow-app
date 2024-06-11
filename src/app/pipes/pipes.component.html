@@ -1,0 +1,9 @@
+<div>
+    @for(u of users; track u.id){
+    <h1 appHighlight>Emplyee {{u.name | uppercase}} </h1>
+    <h2>This is user profile of {{u.name | titlecase }} and He is {{ u.status | lowercase }}. He is having age of {{u.age}}</h2>
+    <h2>He has been earning salary of {{u.salary | currency:'INR'}} per month.</h2>
+    <h2>He has started his job on {{u.Date }} </h2>
+    <h2>His phone number is {{u.phoneno | countrycode:"IND"}} </h2>
+    <hr> }
+</div>

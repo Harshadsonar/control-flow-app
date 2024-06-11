@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:controlflowapp": "node dist/controlflowapp/server/server.mjs"
+    "serve:ssr:controlflowapp": "node dist/controlflowapp/server/server.mjs",
+    "serve:ssr:controlflow": "node dist/controlflow/server/server.mjs"
   },
   "private": true,
   "dependencies": {

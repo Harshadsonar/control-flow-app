@@ -1,0 +1,50 @@
+<!-- Rendering Dynamic Data using Interpolation -->
+<h2>This is user profile - {{Username.toUpperCase() }} and He is {{ status }}. He is having Salary of {{salary}}</h2>
+<!-- Property Binding  -->
+<button [disabled]="isBtnDisabled">click me</button>
+<h1>input Value - {{inputVal}}</h1>
+<!-- 2 way data binding   -->
+<input type="text" [value]="inputVal" (input)="onChange($event)">
+
+<!-- 2 way data binding & Banana in the box  -->
+<!-- <input type="text" [(ngModel)]="inputVal" /> -->
+
+
+
+<!-- control flow @for  -->
+<!-- <div>
+    similar to JS for of loops track - unique identifier or key 
+    @for(user of users; track user.id){
+    <h3>Name - {{user.name}}</h3>
+    }
+</div> -->
+
+<hr/>
+
+<div>
+    @for(employee of employees; track employee.id){
+    <h4>Name - {{employee.name}}, Status - {{employee.status}}, salary - {{employee.salary}}, profile - {{employee.position}}</h4>
+    }
+</div>
+<hr/>
+
+
+<!-- control flow @if @else  -->
+<div>
+    @for(user of users; track user.name) { @if(user.age > 24){
+    <h4>Name - {{user.name}} Status - {{user.status}} age - {{user.age}}</h4>
+    }@else {
+    <h4>Name - {{user.name}} Status - {{user.status}} age - hidden</h4>
+    } }
+</div>
+<hr/>
+
+<!-- directive ngFor  -->
+<div *ngFor="let user of users">
+    <h4>Name - {{user.name}} Status - {{user.status}} age - {{user.age}}</h4>
+</div>
+
+
+<!-- parent to child data passing -->
+<h1 appHighlight>Name - {{name}}, Status - {{isSingle?"Single":"Married"}}, Salary = {{salary}}</h1>
+<!-- <button ((click))="sendData()">Send Data</button> -->
